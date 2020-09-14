@@ -9,6 +9,7 @@ gem 'lookup_http', '>= 1.0.3'
 gem 'facter', '>= 1.7.0'
 gem 'rspec-puppet','2.7.8'
 gem 'semantic_puppet'
+gem 'pry-byebug', '>= 3.9.0'
 gem 'rspec-puppet-facts', '>= 1.7'
 gem 'beaker', '< 4.0.0', {"groups"=>["system_tests"]}
 gem 'beaker-rspec', {"groups"=>["system_tests"]}
