@@ -82,16 +82,16 @@
 # Copyright 2014-2015 Gjermund Jensvoll
 #
 class colorprompt (
-  Enum[present,absent] $ensure   = present,
-  Stdlib::Absolutepath $path     = '/etc/profile.d/colorprompt.sh',
-  String $default_usercolor      = 'cyan',
-  Hash $custom_usercolors        = { 'root' => 'magenta' },
-  Optional[String] $server_color = undef,
-  Optional[String] $env_name     = undef,
-  Optional[String] $env_color    = undef,
-  String $prompt                 = $::colorprompt::params::prompt,
-  Boolean $modify_skel           = false,
-  Boolean $modify_root           = false,
+  Enum[present,absent] $ensure          = present,
+  Stdlib::Absolutepath $path            = '/etc/profile.d/colorprompt.sh',
+  String $default_usercolor             = 'cyan',
+  Hash $custom_usercolors               = { 'root' => 'magenta' },
+  Optional[String] $server_color        = undef,
+  Optional[String] $env_name            = undef,
+  Optional[Array[String[1]]] $env_color = undef,
+  String $prompt                        = $::colorprompt::params::prompt,
+  Boolean $modify_skel                  = false,
+  Boolean $modify_root                  = false,
 ) inherits ::colorprompt::params {
 
   file { $path:
